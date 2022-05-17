@@ -24,21 +24,13 @@ func main() {
 
 	for _, file := range files {
 		value := file
-
 		g.Add()
-
 		go func(g *golimit.Limit) {
 			defer g.Done()
-
 			log.Println(value.Name())
-
-			time.Sleep(1 * time.Second)
-
+			time.Sleep(5 * time.Second)
 		}(g)
 	}
-
-
-
 	log.Println("the end")
 	g.Wait()
 
@@ -63,18 +55,14 @@ func main() {
 	start := time.Now()
 	g := golimit.GoLimit(5)
 
-	for i := 0; i < 10; i++ {
-		
+	for i := 0; i < 10; i++ {		
 		g.Add()
-
 		go func(g *golimit.Limit, i int) {
 			defer g.Done() 
-
-			time.Sleep(time.Second * 5)
+			time.Sleep(5 * time.Second)
 			log.Println(i, "done")
 		}(g, i)
 	}
-
 	log.Println("the end")
 	g.Wait()
 
