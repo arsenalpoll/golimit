@@ -4,6 +4,7 @@ import (
 	"sync"
 )
 // 1
+// 2
 type Limit struct {
 	max       uint             //并发最大数量
 	count     uint             //当前已有并发数
