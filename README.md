@@ -71,3 +71,9 @@ func main() {
 }
 
 ```
+
+## 💚 鸣谢
+
+感谢 JetBrains 提供的免费开源 License
+
+[![JetBrains](docs/img/jetbrains.png)](https://www.jetbrains.com/?from=lark-notice-plugin)
